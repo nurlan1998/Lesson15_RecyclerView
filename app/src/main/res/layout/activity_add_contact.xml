@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#29302E"
+    tools:context=".AddContactActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        android:layout_marginTop="16dp"
+        android:text="Name"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/margin_standard"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edFirstName"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/margin_standard"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvLastName"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="@dimen/margin_standard"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/edLastName"
+        android:text="Last Name"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edLastName"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/edFirstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/edFirstName"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvDetailPhoneNumber"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/margin_standard"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/edPhoneNumber"
+        android:text="Phone Number"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edPhoneNumber"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/edLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/edFirstName"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:inputType="phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@id/edPhoneNumber"
+        android:layout_marginTop="32dp"
+        android:text="Add Contact"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:padding="@dimen/margin_standard"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
